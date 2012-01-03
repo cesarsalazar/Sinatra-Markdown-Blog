@@ -1,10 +1,7 @@
 # encoding: UTF-8
 
-require 'rubygems'
 require 'sinatra'
-require 'rack-flash'
 require 'sinatra/content_for'
-require 'sinatra/redirect_with_flash'
 require 'sinatra/reloader' if development?
 require 'haml'
 require 'sass'
