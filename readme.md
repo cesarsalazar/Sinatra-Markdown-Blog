@@ -6,7 +6,7 @@ Considering that now I would tweak my site directly from the source, and because
 
 From the authoring perspective, I feel Markdown is the way to go. I'm tired of all those WYSIWYG menus and options. As a designer, I want to keep it simple and Markdown forces me to do this. It's also easier to write in Write Room and just copy the plain text to Textmate.
 
-For those of you wondering what about advances blogging features such as paging, cross-referencing, tagging, related posts and categories, here is my take. I feel blogging is evolving and such mechanisms belong somewhere else. Perhaps because I thing about my blog as a crafted collection of short essays, I don't care about fancy navigation styles. What I care about is content and order.
+For those of you wondering what about advanced blogging features such as paging, cross-referencing, tagging, related posts and categories, here is my take. I feel blogging is evolving and such mechanisms belong somewhere else. Perhaps because I think about my blog as a crafted collection of short essays, I don't care about fancy navigation styles. What I care about is content and order.
 
 This piece of Sinatra + Markdown (with templating support of HAML and SASS) is what I feel will bring my writing back to life. Let's see if such thing happens.
 
