@@ -9,3 +9,12 @@ From the authoring perspective, I feel Markdown is the way to go. I'm tired of a
 For those of you wondering what about advances blogging features such as paging, cross-referencing, tagging, related posts and categories, here is my take. I feel blogging is evolving and such mechanisms belong somewhere else. Perhaps because I thing about my blog as a crafted collection of short essays, I don't care about fancy navigation styles. What I care about is content and order.
 
 This piece of Sinatra + Markdown (with templating support of HAML and SASS) is what I feel will bring my writing back to life. Let's see if such thing happens.
+
+## The MIT License (MIT)
+Copyright (c) 2012 César Salazar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
