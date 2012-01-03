@@ -1,0 +1,18 @@
+secret.rb
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+# Compiled stylesheets #
+######################
+*.sassc
+
+# OS generated files #
+######################
+.DS_Store
+Icon
+Thumbs.db
