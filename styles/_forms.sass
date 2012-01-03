@@ -1,0 +1,86 @@
+//@import 'select_replacement'
+
+//Base styles
+
+  
+input, textarea, select, option, button
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif
+  font-size: 1em
+  padding: 2px
+
+fieldset
+  padding: 0.5em 1em
+
+.field
+  @include clear
+  padding: 0.5em 0
+  padding-left: 0.2em
+
+label
+  display: block
+  margin-top: 0.5em
+  margin-right: 2em
+  margin-bottom: 0.2em
+  
+input.text, input.file, textarea 
+  line-height: 1.3em
+
+input.radio
+
+input.checkbox
+
+input.submit, button.submit
+  @include submit
+  @include button-roundness
+  margin: 1em 0
+  
+p.note
+  color: $gray
+  font-size: 0.85em
+  padding-top: 0.5em
+  margin-bottom: 0
+
+.notice
+  margin: 1em 0
+  border-top: 1px solid $warning_light
+  border-bottom: 1px solid $warning_light
+  padding: 1em
+  background: $warning_dark
+  
+//Validation
+
+.valid
+  input
+    background-color: $valid_light
+
+.invalid  
+  background-color: $invalid_light
+  p.message
+    margin-top: 0.5em
+    margin-bottom: 0
+    font-size: 0.85em
+    color: $invalid_dark
+    
+p.note.invalid
+  color: $invalid_dark
+  background-color: transparent
+    
+//Large inputs
+
+@mixin label_left
+  label
+    min-width: 6em
+    float: left
+  p.note
+    margin-left: 6em
+
+@mixin input_large
+  input.text
+    font-size: 1.5em
+    padding: 0.2em
+
+//Tagging
+
+ul.taggable
+  input
+    outline: 0

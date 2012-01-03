@@ -1,0 +1,225 @@
+
+
+//Typography mixins
+
+@mixin leagueGothic
+  font-family: 'League Gothic'
+  line-height: 100%
+  text-rendering: optimizeLegibility
+  
+@mixin letterpress($offset: 1px, $size: 1px, $color: #FFFFFF)
+  text-shadow: 0 $offset $size $color
+  
+@mixin typo-size($size: 1em)
+  font-size: $size
+  line-height: $size
+  margin-bottom: $size
+  @if $size/60 >= 0.05em
+    letter-spacing: -0.05em
+
+
+// Layout mixins
+
+@mixin centered($width: 960px)
+  margin-left: auto
+  margin-right: auto
+  width: $width
+  
+@mixin clear
+  overflow: hidden
+  
+@mixin layout($columns, $width, $padding)
+  width: $width/$columns - ($padding)
+  padding-right: $padding 
+  
+@mixin horizontal-list($margin: 0)
+  list-style: none
+  display: inline
+  @include clear
+  li
+    display: inline
+    margin-left: $margin
+    margin-right: $margin
+
+@mixin main-content($width: 900px)
+  @include centered($width)
+  //@include round-corners(10px)
+  //@include box-shadow(0 3px 5px rgba(1,1,1,0.5))
+  @include clear
+  background: $white
+  padding: 30px
+
+@mixin vertical-tabs  
+  li
+    line-height: 2em
+    font-size: 1.2em
+    cursor: pointer
+    &:hover
+      background-color: $light_gray
+    a
+      display: block  
+      &:hover
+        text-decoration: none  
+      
+@mixin tabbed-edit-combo
+  #menu
+    width: 27%
+    float: left
+    min-height: 300px
+    background: transparent url('/images/vertical_line_gradient.png') no-repeat scroll 100% 0
+    @include vertical-tabs
+    li
+      margin-bottom: 0
+      margin-top: 0
+      padding-left: 0.5em
+      line-height: 2.5em
+      border-bottom: 1px solid $light_gray
+      &:first-child
+        border-top: 1px solid $light_gray
+
+  #contents
+    position: relative
+    width: 70%
+    float: right
+    min-height: 300px
+    h3
+      @include vignetted-heading
+
+@mixin crop-combo($width: 150px, $height: 150px)
+  #preview
+    margin: 1em 0 2em
+    border: 3px solid $light_gray
+    position: relative
+    width: $width
+    height: $height
+    background: $white
+    overflow: hidden
+  #original
+    margin: 1em 0
+
+@mixin tags
+  li
+    display: inline-block
+    margin-bottom: 0.5em
+    margin-right: 0.5em
+    padding: 0.5em
+    background: $light_gray
+    border: 1px solid $light_gray*0.9
+    
+@mixin dialog
+  @include round-corners(1em)
+  padding: 1em
+        
+//Sidebar
+
+@mixin sidebar
+  background: $light_gray
+  padding: 1em
+  margin-bottom: 1em
+  @include round-corners(5px)
+  h2
+    margin-top: 0.5em
+    @include letterpress(2px)
+    
+
+
+//Stylishness mixins
+
+@mixin round-corners($radius: 5px)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -khtml-border-radius: $radius
+  border-radius: $radius
+    
+@mixin box-shadow($value: 0px 1px 4px rgba(0,0,0,0.25))
+  -moz-box-shadow: $value  
+  -webkit-box-shadow: $value
+  box-shadow: $value
+
+@mixin bg-glow($vertical_offset: 0)
+  background-image: url("/images/bg_glow.png")
+  background-repeat: no-repeat
+  background-position: 50% $vertical_offset
+
+@mixin numbered-heading
+  display: block
+  .number
+    float: left
+    color: $contrast
+    margin-right: 0.5em
+  .title
+    display: block
+    overflow: hidden
+
+@mixin vignetted-heading
+  background: transparent url('/images/contrast_vignette.png') no-repeat scroll 0 50%
+  padding-left: 1em
+
+//Button mixins
+
+@mixin a-submit($line-height: 1.6em)
+  line-height: $line-height
+  @include submit($line-height*0.5)
+  @include round-corners($line-height*1.2)
+
+@mixin submit($radius: 1.3em)
+  border: 1px solid #666
+  background-color: #DDD
+  @include round-corners($radius)
+  @include letterpress
+  height: $radius*2
+  padding-left: $radius*1.4
+  padding-right: $radius*1.4
+  cursor: pointer
+  text-align: center
+  font-weight: bold
+  &:hover
+    background-color: #CCC
+
+@mixin button-contrast
+  background-color: #EEE
+  &:hover
+    color: #FFF
+    @include letterpress(-1px,1px,#000)
+    background-color: $contrast
+
+@mixin button($radius)
+  display: block
+  text-align: center
+  @include round-corners($radius)
+  padding: 10px 5px
+  
+@mixin button-roundness
+  background-image: url('/images/bg_button_roundness.png')
+  background-repeat: repeat-x
+  background-position: 50% 0
+  
+@mixin fb_connect
+  text-indent: -6000px
+  display: block
+  width: 250px
+  height: 33px
+  background: transparent url('/images/fb_connect_250px.png') scroll no-repeat 0 0
+
+@mixin open-in-new-window
+  padding-right: 20px
+  background: transparent url('/images/open_in_new_window.png') no-repeat scroll 100% 50%
+  
+
+// Tables
+
+@mixin basic-table
+  table
+    thead
+      background-color: $brand
+      color: $white
+      line-height: 2
+      vertical-align: middle
+      td
+
+    tr
+      line-height: 2
+    td
+      padding-left: 1em
+      padding-right: 1em
+      border-bottom: 1px solid $light_gray

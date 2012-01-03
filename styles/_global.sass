@@ -1,0 +1,94 @@
+@import 'reset', 'palette', 'fonts', 'mixins', 'forms'
+ 
+body
+  font: 16px "Noticia Text", serif
+  background: $light_gray url(/images/groovepaper.png)
+  color: $black
+  
+h1, h2, h3
+  font-family: "Bree Serif", serif
+  letter-spacing: -0.04em
+  word-spacing: 0.08em
+  line-height: 1
+h1
+  font-size: 4em
+  margin-bottom: 0.25em
+  color: $brand
+h2
+  font-size: 1.75em
+  margin-bottom: 0.5em
+  color: $brand
+  
+p
+  line-height: 1.5
+  margin-bottom: 1em
+
+ol
+  list-style: decimal outside
+  padding-left: 1.3em
+  li
+    padding-left: 1.3em
+  
+ul
+  padding-left: 1.3em
+  list-style: circle outside
+  li
+    padding-left: 1.3em
+  
+  
+  
+#content
+  @include centered(720px)
+  margin-top: 60px
+  margin-bottom: 10em
+  padding: 90px 60px
+  @include box-shadow(0px 5px 10px rgba(0,0,0,0.25))
+  background: #FFF
+  h1
+    font-size: 3em
+  p, li
+    word-spacing: 0.2em
+    margin-bottom: 1.2em
+  ol
+    li
+      font-style: italic
+      p
+        font-style: normal
+  a
+    color: $brand
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+      
+  #share
+    margin-top: 4em
+    overflow: hidden
+    @include centered(100px)
+    a 
+      float: left
+      display: block
+      width: 41px
+      height: 41px
+      &:hover
+        opacity: 1 !important
+    #twitter
+      background: transparent url('/images/twitter.png') no-repeat scroll 0 0
+      opacity: 0.75
+      margin-right: 17px
+    #facebook
+      background: transparent url('/images/facebook.png') no-repeat scroll 0 0
+      opacity: 0.75
+
+@media screen and (max-device-width: 480px)
+  body
+    background: transparent
+  #content
+    width: 100%
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 2em
+    p, li
+      font-size: 1.2em
+    
+
+    
