@@ -4,7 +4,7 @@ require 'sinatra'
 require 'sinatra/content_for'
 require 'sinatra/reloader' if development?
 require 'haml'
-require 'sass'
+require 'sass/plugin/rack'
 require 'rdiscount'
 require 'nokogiri'
 
