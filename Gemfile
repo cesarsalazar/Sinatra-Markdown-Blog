@@ -3,7 +3,7 @@ source :gemcutter
 
 gem "sinatra"
 gem "sinatra-reloader"
-gem "sinatra-content-for"
+gem "sinatra-contrib"
 gem "haml"
 gem "sass"
 gem "rdiscount"
